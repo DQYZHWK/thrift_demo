@@ -1,4 +1,3 @@
-
 from match_client.match import Match
 from match_client.match.ttypes import User
 
@@ -10,7 +9,7 @@ from thrift.protocol import TBinaryProtocol
 
 def main():
     # Make socket
-    transport = TSocket.TSocket('localhost', 9090)
+    transport = TSocket.TSocket('localhost', 9090) #所提供的服务的主机地址&端口
 
     # Buffering is critical. Raw sockets are very slow
     transport = TTransport.TBufferedTransport(transport)
@@ -33,4 +32,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
